@@ -1,0 +1,46 @@
+*******Planning Making BlackJack*******
+Step 4. Dealing the Cards- we will generate them dynamically using JavaScript. When the "Deal" button is clicked, deal 4 times. Once to the player, once to the dealer, then the player and then to the dealer. We will need to attach an event listener to the button, create a new image element and append it to the id dealer-hand as well as the id player-hand.
+
+Hit-Me- When the "Hit" button is clicked, deal one more card to the player, and then another to the dealer. we will have to attach an event listener to the hit button as well. 
+
+Creating a deck- The next step is to create a deck of cards. We can make our "deck" an array of objects. Each one of the objects in the deck will represent a card. Each card will have a rank and a suit. (N.B. the rank is NOT the same as points)
+Rather than manually code a whole deck of cards, we can write a function to generate a deck of 52 cards. Create a function buildDeck returns a new array with 52 card objects. There are 4 suits: diamonds, clubs, hearts and spades. For each suit there is a rank from 1 to 13.
+
+Deal the deck- create something to represent the player and dealer hands so go ahead and create two new arrays: dealerHand/playerHand
+These arrays of cards will later be used to calculate the total points for the hand.
+Adjust the code so that when we click the "Deal" button, it will remove a card from the deck, then place that card into the playerHand array.
+
+Hint: Is there an array method allows us to remove and return an item from an array? (Pop)
+
+
+Gameplay should still deal the same as before: 1 card each to player, dealer, player, dealer.
+
+Step 8: Image From Cards- The images have been provided with a naming structure as folllows...{rank}_of_{suit}.png i.e. 5_of_hearts.png
+
+Step 9: Render Hands- Write a function render that loops over the dealerHand and playerHand arrays and appends a new card image to the appropriate elements for each card in the hands.
+
+
+Step 10: Shuffle the Deck-
+Write a function to shuffle the deck. Here are some strategies for shuffling the deck:
+
+For fixed number of times, randomly choose 2 cards within the deck and swap them.
+Create a new array, randomly choose one card after another from the original array and push it to the new array.
+Search on StackOverflow for a solution to "shuffle a javascript array"
+Use the shuffle function to shuffle the deck when you hit the deal button but before you deal the cards.
+
+Step 11: Calculate points for a hand
+Write a function calculatePoints that takes in an array of card objects and returns the points for that hand. 
+Step 12: Display points
+After dealing any card, display the current points for the dealer and the player. You may want to consider adding this code to your render function.
+
+Step 13: Busts
+Check for busts after each card is dealt. A bust is when either the dealer or the player's hand go over 21 points. When that happens, they lose. If there is a bust, display a message on the page saying that they busted. There is a div with an id of messages already on the page that you can use to do this.
+
+Step 14: Player stands
+When the "Stand" button is clicked, the player doesn't want any more cards. Deal cards to the dealer until he reaches 17 points or more.
+attach an event listener with function to pass the deal to the dealer.
+
+
+Step 15: Determine winner
+When the dealer's turn is over, whoever has the most points wins. Determine the winner. Display a message to show who won. You might also want to disable the "Deal", "Hit", and "Stand" buttons at this point.
+Step 16: Restart game
