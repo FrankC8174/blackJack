@@ -43,4 +43,4 @@ attach an event listener with function to pass the deal to the dealer.
 
 Step 15: Determine winner
 When the dealer's turn is over, whoever has the most points wins. Determine the winner. Display a message to show who won. You might also want to disable the "Deal", "Hit", and "Stand" buttons at this point.
-start game
+start game!!!
