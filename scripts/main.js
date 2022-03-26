@@ -78,6 +78,7 @@ buildDeck();
 shuffleArray(deck);
 
 
+
 deal.addEventListener('click', ()=>{
 let message = document.querySelector('.message');
 message.textContent = "";
